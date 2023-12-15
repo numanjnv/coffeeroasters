@@ -1,6 +1,10 @@
 .collection {
     margin-bottom: 200px;
     margin-top: 100px;
+    background-image: url(../../assets/svg/our-collection-bg.svg);
+    background-repeat: no-repeat;
+    background-position-x: 60%;
+
 
     &-box {
         max-width: 100%;
@@ -10,17 +14,6 @@
         align-items: center;
         justify-content: start;
 
-        h2 {
-            color: #83888F;
-            font-family: "Fraunces 9pt";
-            font-size: 150px;
-            font-style: normal;
-            font-weight: 900;
-            line-height: 72px;
-            position: absolute;
-            z-index: -9;
-            opacity: 0.3;
-        }
 
         ul {
             display: flex;
@@ -61,6 +54,93 @@
                 line-height: 26px;
                 margin-top: 24px;
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1129px) {
+    .collection {
+        background-size: 75%;
+        background-position: 120px 30px;
+    }
+}
+
+@media only screen and (max-width:1023px) {
+    .collection {
+
+        background-position-y: 60px ;
+        margin-bottom: 144px;
+
+        
+        &-list{
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            gap: 47.5px;
+        }
+
+        &-item{
+            display: flex;
+            align-items: center;
+            gap: 0 36px;
+        }
+
+        &-title{
+            margin: 0 0 24px 0;
+        }
+
+        &-text{
+            width: 282px;
+        }
+
+       
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+    .collection {
+
+        background-position: 13vw 27px;
+        margin-bottom: 120px;
+
+        &-list{
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &-item{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-info-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .collection{
+        padding-top: 60px;
+        background-position-x: 10vw;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .collection{
+        img{
+            width: 180px;
+            object-fit: cover;
+        }
+
+
+
+        &-text{
+            width: 180px;
         }
     }
 }
